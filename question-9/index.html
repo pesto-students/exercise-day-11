@@ -1,4 +1,5 @@
-<!-- Write a JavaScript program to highlight the bold words of the following paragraph, on mouse over a certain link. Go to the editor -->
+<!-- Write a JavaScript program to highlight 
+  the bold words of the following paragraph, on mouse over a certain link. Go to the editor -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,10 +9,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <script>
+  function boldText() {
+    const boldText = document.querySelector('p > strong');
+    boldText.textContent = "new text";
+    console.log('clicked');
+  }
+  </script>
 </head>
 
 <body>
-
+<p onclick="boldText()">this is a pragraph with <strong> Strong text</strong> </p>
 </body>
 
 </html>
