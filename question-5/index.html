@@ -24,9 +24,26 @@
       <td>Row3 cell2</td>
     </tr>
   </table>
-  <form>
+  <br />
+  <form name="sampleForm">
+    <label for="rowIndex">Row to be Changed</label>
+    <input type="number" id="rowIndex" name="rowIndex" placeholder="Row to be changed" />
+    <br />
+    <label for="columnIndex">Column to be Changed</label>
+    <input type="number" id="columnIndex" name="columnIndex" placeholder="Column to be changed" />
+    <br />
     <input type="button" onclick="changeContent()" value="Change content">
   </form>
+  <script>
+    function changeContent() {
+      const tableElement = document.getElementById('myTable');
+
+      const rowIndex = document.forms['sampleForm']['rowIndex'].value;
+      const columnIndex = document.forms['sampleForm']['columnIndex'].value;
+      const getElement = tableElement.querySelector(`tr:nth-child(${rowIndex})`).querySelector(`td:nth-child(${columnIndex})`);
+      getElement.innerText = 'Content Changed';
+    }
+  </script>
 </body>
 
 </html>
