@@ -25,8 +25,20 @@
     </tr>
   </table>
   <form>
+    Rows to be changed:
+    <input type = "number" id = "rows">
+    Columns to be changed:
+    <input type="number" id = "columns">
     <input type="button" onclick="changeContent()" value="Change content">
   </form>
+  <script>
+    function changeContent() {
+      var rowNo = document.getElementById("rows").value;
+      var colNo = document.getElementById("columns").value;
+      var myTable = document.getElementById("myTable");
+      myTable.rows[rowNo-1].cells[colNo-1].innerHTML = "Content changed";
+    }
+  </script>
 </body>
 
 </html>
