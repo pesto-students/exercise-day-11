@@ -1,32 +1,46 @@
 <!-- Write a JavaScript function that accept row, column, (to identify a particular cell)
-  and a string to update the content of that cell. -->
+  and a string to update the content of that cell. ** use query selector all-->
 
-<!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset=utf-8 />
-  <title>Change the content of a cell</title>
-</head>
-
-<body>
-  <table id="myTable" border="1">
-    <tr>
-      <td>Row1 cell1</td>
-      <td>Row1 cell2</td>
-    </tr>
-    <tr>
-      <td>Row2 cell1</td>
-      <td>Row2 cell2</td>
-    </tr>
-    <tr>
-      <td>Row3 cell1</td>
-      <td>Row3 cell2</td>
-    </tr>
-  </table>
-  <form>
-    <input type="button" onclick="changeContent()" value="Change content">
-  </form>
-</body>
-
-</html>
+  <!DOCTYPE html>
+  <html>
+  
+  <head>
+    <meta charset=utf-8 />
+    <title>Change the content of a cell</title>
+    <script>
+    function changeContent() {
+      const table = document.getElementById('myTable');
+      const row = document.getElementById('row').value;
+      const col = document.getElementById('col').value;
+      const newdata = document.getElementById('newData').value;
+      const elementToBeChanged = table.querySelector(`tr:nth-child(${row})`).querySelector(`td:nth-child(${col})`);
+      elementToBeChanged.innerHTML = newdata;
+      
+    }
+    </script>
+  </head>
+  
+  <body>
+    <table id="myTable" border="1">
+      <tr>
+        <td>Row1 cell1</td>
+        <td>Row1 cell2</td>
+      </tr>
+      <tr>
+        <td>Row2 cell1</td>
+        <td>Row2 cell2</td>
+      </tr>
+      <tr>
+        <td>Row3 cell1</td>
+        <td>Row3 cell2</td>
+      </tr>
+    </table>
+    <form>
+    <input type="text" name="row" id="row">
+    <input type="text" name="col" id="col">
+    <input type="text" id="newData">
+      <input type="button" onclick="changeContent()" value="Change content">
+    </form>
+  </body>
+  
+  </html>
