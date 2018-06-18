@@ -14,7 +14,6 @@
 </head>
 
 <body>
-  aaa
   <form>
     Select your favorite Color :
     <select id="mySelect">
@@ -24,6 +23,12 @@
       <option>White</option>
     </select>
     <input type="button" onclick="getOptions()" value="Count and Output all items">
+    <script>
+    function getOptions(){
+      var ddl = document.getElementById("mySelect");
+      window.alert(ddl.options.length);
+    }
+    </script>
   </form>
 </body>
 
