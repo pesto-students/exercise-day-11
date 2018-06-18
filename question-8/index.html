@@ -1,4 +1,5 @@
-<!-- Write a JavaScript program to count and display the items of a dropdown list, in an alert window. -->
+<!-- Write a JavaScript program to count and display the 
+  items of a dropdown list, in an alert window. -->
 
 <!DOCTYPE html>
 <html>
@@ -12,7 +13,20 @@
   </style>
   <title>Count and display items of a dropdown list - w3resource</title>
 </head>
+<script>
+  function getOptions() {
+    const selectorOptions = Array.from(document.getElementById('mySelect').options);
+    let alertMessage = '';
+    const len = selectorOptions.length;
+    selectorOptions.forEach(element => {
+      alertMessage += element.value +'\n';
 
+      
+    });
+    alert ('count =' + len +'\n'+ alertMessage);
+
+  }
+</script>
 <body>
   <form>
     Select your favorite Color :
