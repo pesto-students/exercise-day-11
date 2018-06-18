@@ -7,10 +7,12 @@ Use the nextSibling property to access an element.
 Use the previousSibling property to access an element.
 Use the parentNode property to access an element.
 Use the childNodes property to access a group of child elements -->
-
+<!DOCTYPE html>
 <html>
 
 <head>
+  <meta charset=utf-8 />
+  
 
   <title>JavaScript and the Document Object Model</title>
 </head>
@@ -18,20 +20,29 @@ Use the childNodes property to access a group of child elements -->
 <body>
 
   <div id="page">
-  
+
     <div id="header">
       <h1 id="title">Page title</h1>
     </div>
-  
-    <div id="content">
-    
-      <h2>Content title</h2>
-    
-      <p>Some copy goes here</p>
-    
-      <p>More copy goes here</p>
-      </div>
-    </div>
-</body>
 
+    <div id="content">
+
+      <h2>Content title</h2>
+
+      <p>Some copy goes here</p>
+
+      <p>More copy goes here</p>
+    </div>
+  </div>
+</body>
+<script>
+    const div = document.querySelector("div");
+    let x = div.firstChild;
+    let lastChild=div.lastChild;
+    const nextSibling=div.firstChild.nextSibling;
+    const previousSibling = nextSibling.previousSibling;
+    const parent= previousSibling.parentNode;
+    const childs= div.childNodes;
+    alert(nextSibling.firstChild.nextSibling.textContent+div.lastChild.previousSibling.textContent);
+  </script>
 </html>
