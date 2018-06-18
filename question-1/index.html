@@ -2,7 +2,6 @@
 
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset=utf-8 />
   <title>JS DOM paragraph style</title>
@@ -12,6 +11,12 @@
   <p id='text'>JavaScript Exercises</p>
   <div>
     <button id="jsstyle" onclick="js_style()">Style</button>
+    <script>
+    function js_style(){
+      var ptext  = document.getElementById('text');
+      ptext.style.color = 'red';
+    }
+  </script>
   </div>
 </body>
 

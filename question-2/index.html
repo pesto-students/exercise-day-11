@@ -7,7 +7,6 @@
   <meta charset=utf-8 />
   <title>Return first and last name from a form</title>
 </head>
-
 <body>
   <form id="form1" onsubmit="getFormvalue()">
     First name:
@@ -16,7 +15,12 @@
     <input type="text" name="lname" value="Beckham">
     <br>
     <input type="submit" value="Submit">
+  <script>
+  function submitform(){
+    var a = document.getElementsByName('fname');
+    var b = document.getElementsByName('lname');
+  }
+    </script>
   </form>
 </body>
-
 </html>
