@@ -9,17 +9,40 @@ Change the value of a node attribute -->
 
 <head>
   <title>JavaScript and the Document Object Model</title>
+  <style>
+  .para1 {
+    background: red;
+  }
+   .para2 {
+     background: blue;
+   }
+  
+  </style>
+  <script>
+  
+  function changeH2() {
+    console.log('trigger');
+    const content = document.getElementById('content');
+  const h2 = content.firstElementChild;
+  h2.firstChild.nodeValue = 'heading has been modified';
+  }
+
+  function ChangeAttr() {
+    const para1 = document.querySelector('.para1');
+    para1.getAttributeNode('class').value = 'para2'
+  }
+  </script>
 </head>
 
 <body>
-  <div id="page">
+  <div id="page" >
     <div id="header">
       <h1 id="title">Page title</h1>
     </div>
     <div id="content">
-      <h2>Content title</h2>
-      <p>Some copy goes here</p>
-      <p>More copy goes here</p>
+      <h2 onclick="changeH2()">Content title</h2>
+      <p class='para1' onclick="ChangeAttr()">Some copy goes here</p>
+      <p class= 'para2'>More copy goes here</p>
     </div>
   </div>
 </body>
