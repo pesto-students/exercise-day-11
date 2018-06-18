@@ -11,6 +11,21 @@
     }
   </style>
   <title>Count and display items of a dropdown list - w3resource</title>
+<script>
+function getOptions(){
+  const select = document.getElementById("mySelect");
+  let text = "The Number of items : ";
+  let i=0;
+  const length=select.length;
+  text+=length;
+  for(i=0;i<length;i++){
+    text+="\n"+select.options[i].text;
+  }
+  alert(text);
+
+}
+
+</script>
 </head>
 
 <body>
