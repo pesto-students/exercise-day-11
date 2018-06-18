@@ -25,8 +25,19 @@
     </tr>
   </table>
   <form>
+    Rows value
+    <input type = "text" id = "rows">
+    Coulumn value
+    <input type = "text" id = "coulumn">
     <input type="button" onclick="changeContent()" value="Change content">
   </form>
 </body>
+<script>
+  function changeContent(row, coulumn, string) {
+    let rowNo = document.getElementById("rows");
+    let coulumnNo = document.getElementById("coulumn");
+    myTable.row(rowNo-1).cells(coulumnNo-1).innerHTML = "Content changed";
+  }
+</script>
 
 </html>
