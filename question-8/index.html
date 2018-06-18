@@ -37,7 +37,8 @@
 
       const dropdownChildren = Array.from(dropdownElement.children);
 
-      displayElementHTML += `The options are: <br>`;
+      displayElementHTML += `<br>The options are: <br>`;
+
       dropdownChildren.forEach(item => {
         displayElementHTML += `${item.innerText} <br>`;
       });
