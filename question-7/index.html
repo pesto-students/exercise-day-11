@@ -18,6 +18,12 @@
     </select>
     <input type="button" onclick="removecolor()" value="Select and Remove">
   </form>
+  <script>
+    function removecolor() {
+      let myDropdown = document.getElementById("colorSelect");
+      myDropdown.remove(myDropdown.selectedIndex);
+    }
+  </script>
 </body>
 
 </html>
