@@ -15,13 +15,15 @@
     <br> Last name:
     <input type="text" name="lname" value="Beckham">
     <br>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit" onclick="getValues()">
   </form>
   <script>
+    function getValues() {
     let myform = document.getElementById('form1');
     let fname = myform.fname.value;
     let lname = myform.lname.value;
     alert(fname + " " + lname);
+    }
   </script>
 </body>
 

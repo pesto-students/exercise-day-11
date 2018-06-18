@@ -13,6 +13,17 @@ get the value of the href, hreflang, rel, target, and type attributes of the spe
     <a id="w3r" type="text/html" hreflang="en-us" rel="nofollow" target="_self" href="https://pesto.tech/">Pesto</a>
   </p>
   <button onclick="getAttributes()">Click here to get attributes value</button>
+  <script>
+    function getAttributes() {
+      let myLink = document.getElementById('w3r');
+      let hrefValue = myLink.getAttribute("href");
+      let hrefLangValue = myLink.getAttribute("hreflang");
+      let relValue = myLink.getAttribute("rel");
+      let targetValue = myLink.getAttribute("target");
+      let typeValue = myLink.getAttribute("type");
+      alert(hrefValue+ " " + hrefLangValue + " " + relValue + " " + targetValue + " " + typeValue);
+    }
+  </script>
 </body>
 
 </html>
