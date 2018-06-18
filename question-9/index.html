@@ -11,7 +11,29 @@
 </head>
 
 <body>
+    <p><strong>Content title</strong></p>
 
+    <p>Some <strong>strong text</strong> goes here</p>
+
+    <p>Hover over <a href="#">here</a></p>
 </body>
+<script>
 
+  let anchorElement = document.querySelector('a');
+  let strongElements = Array.from(document.querySelectorAll('strong'));
+  anchorElement.addEventListener('mouseover', event => {
+
+    strongElements.forEach(item => {
+      item.style.backgroundColor = 'yellow';
+    })
+  });
+
+  anchorElement.addEventListener('mouseout', event => {
+
+    strongElements.forEach(item => {
+      item.style.backgroundColor = '';
+    })
+  });
+
+</script>
 </html>

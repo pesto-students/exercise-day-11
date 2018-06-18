@@ -22,6 +22,18 @@ Change the value of a node attribute -->
       <p>More copy goes here</p>
     </div>
   </div>
+  <script>
+  const node = document.getElementById('title');
+
+  const firstChild = node.firstChild;
+  const { nodeValue } = firstChild;
+  firstChild.nodeValue = "Changed";
+
+  const attr = node.getAttribute('id');
+
+  node.setAttribute('id', 'modifiedTitle');
+
+  </script>
 </body>
 
 </html>

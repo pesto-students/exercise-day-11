@@ -15,6 +15,7 @@ Use the replaceChild method to replace a node. -->
   <div id="page">
     <div id="header">
       <h1 id="title">Page title</h1>
+      <h1 id="title2">Page title-2</h1>
     </div>
     <div id="content">
       <h2>Content title</h2>
@@ -22,6 +23,24 @@ Use the replaceChild method to replace a node. -->
       <p>More copy goes here</p>
     </div>
   </div>
+  <script>
+    const node = document.getElementById('header');
+    const para = document.createElement('p');
+    para.innerHTML = 'Hello, World';
+    const child = para;
+    node.appendChild(child);
+
+    const par2 = document.createElement('p');
+    par2.innerHTML = 'Hello, Universe';
+    const childBefore = par2;
+    const title = document.getElementById('title');
+    node.insertBefore(childBefore, title);
+
+    title.parentNode.removeChild(title);
+    const text = document.createTextNode('Yeah');
+    node.replaceChild(text, node.childNodes[0]);
+
+  </script>
 </body>
 
 </html>
