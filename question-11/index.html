@@ -4,10 +4,10 @@ Retrieve the value of a node using nodeValue.
 Change the value of a node using nodeValue.
 Retrieve the value of a node attribute.
 Change the value of a node attribute -->
-
 <html>
 
 <head>
+  <meta charset="utf-8"/>
   <title>JavaScript and the Document Object Model</title>
 </head>
 
@@ -22,6 +22,15 @@ Change the value of a node attribute -->
       <p>More copy goes here</p>
     </div>
   </div>
+  <script>
+    const myheading = document.getElementById("title");
+    const initialNodeValue = myheading.childNodes[0].nodeValue;
+    myheading.childNodes[0].nodeValue = "New Title";
+    const tag1=document.getElementsByTagName("div")[0];
+    const tagname=tag1.getAttribute("id");
+    alert(tagname);
+
+  </script>
 </body>
 
 </html>
