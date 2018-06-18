@@ -6,10 +6,27 @@ get the value of the href, hreflang, rel, target, and type attributes of the spe
 
 <head>
   <meta charset=utf-8 />
+  <script>
+    function getAttributes() {
+      var aRef = document.getElementById('w3r');
+      var p1 = document.getElementById('para');
+      var newdiv = document.createTextNode("Type = " + aRef.type+" \n");
+      var newdiv1 = document.createTextNode("Target = " + aRef.target+" ");
+      var newdiv2 = document.createTextNode("Rel = "+ aRef.rel+" ");
+      var newdiv3 = document.createTextNode("Hreflang = " + aRef.hreflang+" ");
+      var newdiv4 = document.createTextNode("Href = "+ aRef.href+" ");
+
+      p1.appendChild(newdiv);
+      p1.appendChild(newdiv1);
+      p1.appendChild(newdiv2);
+      p1.appendChild(newdiv3);
+      p1.appendChild(newdiv4);
+    }
+  </script>
 </head>
 
 <body>
-  <p>
+  <p id="para">
     <a id="w3r" type="text/html" hreflang="en-us" rel="nofollow" target="_self" href="https://pesto.tech/">Pesto</a>
   </p>
   <button onclick="getAttributes()">Click here to get attributes value</button>
