@@ -11,12 +11,17 @@
 <body>
   <form>
     <select id="colorSelect">
-      <option>Red</option>
-      <option>Green</option>
-      <option>White</option>
-      <option>Black</option>
+      <option id="a">Red</option>
+      <option id="b">Green</option>
+      <option id="c">White</option>
+      <option id="d">Black</option>
     </select>
     <input type="button" onclick="removecolor()" value="Select and Remove">
+    <script>
+      function removecolor(){
+        var a =  document.getElementById("colorSelect");
+      }
+    </script>
   </form>
 </body>
 
