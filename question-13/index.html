@@ -18,5 +18,18 @@ On clicking on the button, the page should scroll to top. -->
 <body>
   <div class="button"> <span class = "up">Up</span></div>
 </body>
-
+  <script>
+    const but = document.querySelector('.button');
+    but.style.display = 'none';
+    let scrollPos = 0;
+    window.addEventListener('scroll', function(evt) {
+      scrollPos = window.scrollY;
+      if(scrollPos > 800) {
+        but.style.display = 'block';
+      }
+      if(scrollPos = 0) {
+        but.style.display = 'none';
+      }
+    });
+  </script>
 </html>
