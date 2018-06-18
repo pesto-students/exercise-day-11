@@ -19,7 +19,9 @@
     <input type="button" onclick="removecolor()" value="Select and Remove">
     <script>
       function removecolor(){
-        var a =  document.getElementById("colorSelect");
+        var a =  document.getElementById("colorSelect").nodeValue;
+        var v = document.getElementById("colorSelect");
+        v.remove(a);
       }
     </script>
   </form>
