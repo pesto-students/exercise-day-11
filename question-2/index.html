@@ -18,5 +18,11 @@
     <input type="submit" value="Submit">
   </form>
 </body>
-
+  <script>
+    const form = document.getElementById('form1');
+    const firstChild = form.firstElementChild;
+    const firstName = form.firstElementChild.getAttribute('value');
+    const lastName = firstChild.nextElementSibling.nextElementSibling.getAttribute('value');
+    console.log(`${firstName} ${lastName}`);
+  </script>
 </html>

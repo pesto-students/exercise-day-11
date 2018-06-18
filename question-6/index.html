@@ -18,8 +18,25 @@
   <table id="myTable" border="1">
   </table>
   <form>
-    <input type="button" onclick="createTable()" value="Create the table">
+    <input type="button" onclick="createTable(3,5)" value="Create the table">
   </form>
 </body>
-
+<script>
+  function createTable(r, c) {
+    const table = document.getElementById('myTable');
+    
+    
+    
+    
+    for(var i = 0; i < r; i += 1) {
+      let row = document.createElement("tr");
+      for( var j = 0; j < c; j += 1) {
+        let col = document.createElement("td");
+        col.innerText = `Row-${i+1} Col-${j+1}`;
+        row.appendChild(col);
+      }
+      table.appendChild(row);
+    }
+  }
+</script>
 </html>

@@ -25,8 +25,13 @@
     </tr>
   </table>
   <form>
-    <input type="button" onclick="changeContent()" value="Change content">
+    <input type="button" onclick="changeContent(1,1)" value="Change content">
   </form>
 </body>
-
+<script>
+  function changeContent(r, c) {
+    const table = document.querySelector('table');
+    table.querySelector(`tr:nth-child(${r})`).querySelector(`td:nth-child(${c})`).innerText = "Changed";
+}
+</script>
 </html>
