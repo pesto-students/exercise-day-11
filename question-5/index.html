@@ -7,6 +7,13 @@
 <head>
   <meta charset=utf-8 />
   <title>Change the content of a cell</title>
+  <script>
+    function changeContent(){
+      const form=document.getElementById('form');
+      const getElement=document.querySelector(`tr:nth-child(${form.row.value}`).querySelector(`td:nth-child(${form.column.value})`);
+      getElement.innerHTML=`Changed`;
+    }
+  </script>
 </head>
 
 <body>
@@ -24,7 +31,11 @@
       <td>Row3 cell2</td>
     </tr>
   </table>
-  <form>
+  <form id="form">
+    <label>row</label>
+    <input type="number" name="row">
+    <label>column</label>
+    <input type="number" name="column">
     <input type="button" onclick="changeContent()" value="Change content">
   </form>
 </body>
