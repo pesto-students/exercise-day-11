@@ -12,12 +12,33 @@
       margin: 30px;
     }
   </style>
+  <script>
+    function createTable() {
+      const form = document.getElementById('form');
+      const table = document.getElementById('myTable');
+      for (let row = 0; row < form.row.value; row++) {
+        const newRow = document.createElement('tr');
+        for (let col = 0; col < form.column.value; col++) {
+          const nC = document.createElement('td');
+          nC.innerText = `Row${row} and column${col}`;
+          newRow.appendChild(nC);
+
+        }
+        table.appendChild(newRow);
+
+      }
+
+    }</script>
 </head>
 
 <body>
   <table id="myTable" border="1">
   </table>
-  <form>
+  <form id="form">
+    <label>Row</label>
+    <input type="number" name="row">
+    <label>Column</label>
+    <input type="number" name="column">
     <input type="button" onclick="createTable()" value="Create the table">
   </form>
 </body>

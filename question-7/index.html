@@ -7,7 +7,12 @@
   <meta charset=utf-8 />
   <title>Remove items from a dropdown list</title>
 </head>
-
+<script>
+  function removecolor(){
+    const colorSelect=document.getElementById('colorSelect');
+    colorSelect.remove(colorSelect.selectedIndex);
+  }
+</script>
 <body>
   <form>
     <select id="colorSelect">
