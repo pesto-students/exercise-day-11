@@ -10,16 +10,15 @@
 <body>
   <form id="form1" onsubmit="getFormvalue()">
     First name:
-    <input type="text" name="fname" value="David">
+    <input type="text" id="t1" name="fname" value="David">
     <br> Last name:
-    <input type="text" name="lname" value="Beckham">
+    <input type="text" id="t2" name="lname" value="Beckham">
     <br>
     <input type="submit" value="Submit">
   <script>
-  function submitform(){
-    var a = document.getElementsByName('fname');
-    var b = document.getElementsByName('lname');
-  }
+     function getFormvalue() {   
+    document.write(document.getElementById("t1").value + document.getElementById("t2").value);
+     }
     </script>
   </form>
 </body>
