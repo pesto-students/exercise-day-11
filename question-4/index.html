@@ -6,6 +6,27 @@
 <head>
   <meta charset=utf-8 />
   <title>Insert row in a table</title>
+  <script>
+  function insert_Row(){
+    let table = document.getElementById('sampleTable');
+   // let row = table.insertRow(0);
+
+    //var cell1 = row.insertCell(0);
+    //var cell2 = row.insertCell(1);
+
+// Add some text to the new cells:
+   //cell1.innerHTML = "Row3 cell1";
+   //cell2.innerHTML = "Row3 cell2";
+    const row = document.createElement("tr");
+    const col1 = document.createElement("td");
+    const col2 = document.createElement("td");
+    col1.innerHTML = "Row3 cell1";
+    col2.innerHTML = "Row3 cell2";
+    row.appendChild(col1);
+    row.appendChild(col2);
+    table.appendChild(row);
+  }
+  </script>
 </head>
 
 <body>
