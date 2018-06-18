@@ -15,7 +15,7 @@
 
 <body>
   <form>
-    Select your favorite Color :
+    Select your favorite Color:
     <select id="mySelect">
       <option>Red</option>
       <option>Green</option>
@@ -24,6 +24,29 @@
     </select>
     <input type="button" onclick="getOptions()" value="Count and Output all items">
   </form>
+
+
+  <script>
+    function getOptions() {
+      const dropdownElement = document.getElementById('mySelect');
+
+      const displayElement = document.createElement('p');
+      let displayElementHTML = '';
+
+      displayElementHTML += `Count: ${dropdownElement.children.length} <br>`;
+
+      const dropdownChildren = Array.from(dropdownElement.children);
+
+      displayElementHTML += `The options are: <br>`;
+      dropdownChildren.forEach(item => {
+        displayElementHTML += `${item.innerText} <br>`;
+      });
+
+      displayElement.innerHTML = displayElementHTML;
+      document.querySelector('body').appendChild(displayElement);
+    }
+
+  </script>
 </body>
 
 </html>
