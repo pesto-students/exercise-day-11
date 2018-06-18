@@ -6,6 +6,17 @@ get the value of the href, hreflang, rel, target, and type attributes of the spe
 
 <head>
   <meta charset=utf-8 />
+  <script>
+    function getAttributes() { 
+    const x = document.getElementById('w3r');
+    const a = x.getAttribute('href');
+    const b = x.getAttribute('hreflang');
+    const c = x.getAttribute('rel');
+    const d = x.getAttribute('target');
+    const e = x.getAttribute('type');
+    alert(a + " " + b + " " + c + " " + d + " " + e);
+    }
+  </script>
 </head>
 
 <body>
