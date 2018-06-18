@@ -25,5 +25,10 @@
     <input type="button" onclick="getOptions()" value="Count and Output all items">
   </form>
 </body>
-
+  <script>
+    function getOptions() {
+      const select = document.getElementById('mySelect');
+      alert(select.childElementCount);
+    }
+  </script>
 </html>
