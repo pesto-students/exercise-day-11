@@ -24,8 +24,22 @@
       <td>Row3 cell2</td>
     </tr>
   </table>
+  Row to be updated:
+  <input type="text" id="row">
+  <br>
+  Column to be Updated:
+  <input type="text" id="column">
+  <br>
   <form>
     <input type="button" onclick="changeContent()" value="Change content">
+    <script>
+    function changeContent(){
+      var a = document.getElementById("row").value;
+      var b = document.getElementById("column").value;
+      var table = document.getElementById("myTable");
+      table.rows[a-1].cells[b-1].innerText = "Content Changed";
+    }
+    </script>
   </form>
 </body>
 

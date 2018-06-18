@@ -20,6 +20,19 @@
   <form>
     <input type="button" onclick="createTable()" value="Create the table">
   </form>
+  <script>
+    function createTable(){
+  var i = window.prompt("Enter the number of Rows");
+  var j = window.prompt("Enter the number of Columns");
+  for(var k = 0; k < i; k += 1) {
+    var t = document.getElementById("myTable").insertRow(k);
+    for( var g = 0; g < j; g += 1){
+      var y = t.insertCell(g);
+      y.innerHTML = "Row"+k + "Column"+g;
+    }
+  }
+  }
+  </script>
 </body>
 
 </html>
