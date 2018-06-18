@@ -17,9 +17,29 @@
 <body>
   <table id="myTable" border="1">
   </table>
-  <form>
+  <br />
+  <form name="sampleForm">
+    <label for="rowNumber">Row Number</label>
+    <input type="number" id="rowNumber" name="rowNumber" placeholder="Row number" />
+    <br />
+    <label for="columnNumber">Column Number</label>
+    <input type="number" id="columnNumber" name="columnNumber" placeholder="Column number" />
+    <br />
     <input type="button" onclick="createTable()" value="Create the table">
   </form>
+  <script>
+    function createTable() {
+      const tableElement = document.getElementById('myTable');
+
+      const rowNumber = document.forms['sampleForm']['rowNumber'].value;
+      const columnNumber = document.forms['sampleForm']['columnNumber'].value;
+
+      const rowElement = document.createElement('tr');
+      rowElement.innerHTML = `Row-${rowNumber} Column-${columnNumber} <br>`;
+
+      tableElement.appendChild(rowElement);
+    }
+  </script>
 </body>
 
 </html>
