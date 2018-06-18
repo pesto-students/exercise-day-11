@@ -13,6 +13,18 @@ Use the childNodes property to access a group of child elements -->
 <head>
 
   <title>JavaScript and the Document Object Model</title>
+  <script>
+    const page = document.getElementById('page');
+    const header = page.firstElementChild;
+    const content = page.lastElementChild;
+    const h2 = content.firstElementChild;
+    const p1 = h2.nextElementSibling;
+    const h2re = p1.previousElementSibling;
+    const parentNode = p1.parentElement;
+    const childNodes = parentNode.childNodes;
+
+
+  </script>
 </head>
 
 <body>
