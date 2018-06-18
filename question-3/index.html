@@ -15,12 +15,12 @@ get the value of the href, hreflang, rel, target, and type attributes of the spe
   <button onclick="getAttributes()">Click here to get attributes value</button>
   <script>
     function getAttributes() {
-      let myLink = document.getElementById('w3r');
-      let hrefValue = myLink.getAttribute("href");
-      let hrefLangValue = myLink.getAttribute("hreflang");
-      let relValue = myLink.getAttribute("rel");
-      let targetValue = myLink.getAttribute("target");
-      let typeValue = myLink.getAttribute("type");
+      const myLink = document.getElementById('w3r');
+      const hrefValue = myLink.getAttribute("href");
+      const hrefLangValue = myLink.getAttribute("hreflang");
+      const relValue = myLink.getAttribute("rel");
+      const targetValue = myLink.getAttribute("target");
+      const typeValue = myLink.getAttribute("type");
       alert(hrefValue+ " " + hrefLangValue + " " + relValue + " " + targetValue + " " + typeValue);
     }
   </script>
