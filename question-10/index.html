@@ -30,8 +30,18 @@ Use the childNodes property to access a group of child elements -->
       <p>Some copy goes here</p>
     
       <p>More copy goes here</p>
-      </div>
     </div>
+  </div>
 </body>
-
+<script>
+    window.onload = function() {
+      const content = document.getElementById('content');
+      const title = content.firstChild;
+      const last = content.lastChild;
+      const sibling = title.nextSibling;
+      const prevSibling = last.previousSibling;
+      const parent = content.parentNode;
+      const child = content.childNodes;
+    }
+  </script>
 </html>

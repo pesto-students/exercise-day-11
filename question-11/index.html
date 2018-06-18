@@ -23,5 +23,15 @@ Change the value of a node attribute -->
     </div>
   </div>
 </body>
-
+<script>
+  window.onload = function() {
+    const newNode = document.getElementById('title');
+    const x = newNode.childNodes[0].nodeValue;
+    console.log(x);
+    newNode.nodeValue = "New Title";
+    const y = newNode.getAttribute('id');
+    console.log(y);
+    newNode.getAttribute('id') = 'newTitle';
+  }
+</script>
 </html>

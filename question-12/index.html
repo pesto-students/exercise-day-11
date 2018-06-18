@@ -23,5 +23,25 @@ Use the replaceChild method to replace a node. -->
     </div>
   </div>
 </body>
+  <script>
+    window.onload = function() {
+      const content = document.getElementById('content');
+      const newNode = document.createElement('p');
+      const newNodeText = document.createTextNode('New Text');
+      content.appendChild(newNode);
+      newNode.appendChild(newNodeText);
 
+      const newNode2 = document.createElement('p');
+      const newNodeText2 = document.createTextNode('New Text 2');
+      newNode2.appendChild(newNodeText2);
+      content.insertBefore(newNode2,content.firstChild);
+
+      content.removeChild(content.childNodes[2]);
+
+      const newNode3 = document.createElement('p');
+      const newNodeText3 = document.createTextNode('Replaced Text');
+      newNode3.appendChild(newNodeText3);
+      content.replaceChild(newNode3,content.childNodes[2]);
+    }
+  </script>
 </html>
