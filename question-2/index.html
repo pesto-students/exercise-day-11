@@ -17,6 +17,13 @@
     <br>
     <input type="submit" value="Submit">
   </form>
+  <script>
+    function getFormvalue() {
+      var firstName = document.forms["form1"]["fname"].value;
+      var lastName = document.forms["form1"]["lname"].value;
+      alert("The name of the person is: " +firstName +" " +lastName);
+    }
+  </script>
 </body>
 
 </html>
