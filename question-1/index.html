@@ -14,5 +14,20 @@
     <button id="jsstyle" onclick="js_style()">Style</button>
   </div>
 </body>
+<script>
+  let button = document.getElementById('jsstyle');
+  let para = document.getElementById('text');
+  let flag = false;
+  function js_style(){
+    
+    if(flag){
+      flag = false;
+      para.style = `font-weight: normal`;
+    }else {
+      flag = true;
+      para.style = `font-weight: bolder`;
+    }
+  }
+</script>
 
 </html>
