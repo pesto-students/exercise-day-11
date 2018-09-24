@@ -13,6 +13,20 @@ get the value of the href, hreflang, rel, target, and type attributes of the spe
     <a id="w3r" type="text/html" hreflang="en-us" rel="nofollow" target="_self" href="https://pesto.tech/">Pesto</a>
   </p>
   <button onclick="getAttributes()">Click here to get attributes value</button>
+
+  <script>
+    function getAttributes() {
+      const attrs = document.querySelector('a#w3r').attributes;
+      const ret = {
+        href: attrs.href.value,
+        hreflang: attrs.hreflang.value,
+        rel: attrs.rel.value,
+        target: attrs.target.value,
+        type: attrs.type.value,
+      };
+      return ret;
+    }
+  </script>
 </body>
 
 </html>

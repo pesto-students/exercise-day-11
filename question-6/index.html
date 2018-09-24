@@ -18,8 +18,36 @@
   <table id="myTable" border="1">
   </table>
   <form>
+    <label>Row
+      <input type="number" name="row" />
+    </label>
+    <label>Column
+      <input type="number" name="column" />
+    </label>
     <input type="button" onclick="createTable()" value="Create the table">
   </form>
+
+  <script>
+    const tblElem = document.querySelector('table#myTable');
+    const rowInput = document.querySelector('input[name="row"]');
+    const columnInput = document.querySelector('input[name="column"]');
+
+    function createTable() {
+      const nRows = rowInput.value;
+      const nCols = columnInput.value;
+
+      let tblString = '';
+      for (let i = 1; i <= nRows; i += 1) {
+        tblString += '<tr>';
+        for (let j = 1; j <= nCols; j += 1) {
+          tblString += `<td>Row-${i} Column-${j}</td>`;
+        }
+        tblString += '</tr>';
+      }
+
+      tblElem.innerHTML = tblString;
+    }
+  </script>
 </body>
 
 </html>
