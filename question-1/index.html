@@ -13,6 +13,19 @@
   <div>
     <button id="jsstyle" onclick="js_style()">Style</button>
   </div>
+
+  <script>
+    const pElem = document.querySelector('p');
+    const transitions = {
+      red: 'blue',
+      blue: 'green',
+      green: 'red'
+    };
+    function js_style() {
+      const curColor = pElem.style.color;
+      pElem.style.color = transitions[curColor] || "red";
+    }
+  </script>
 </body>
 
 </html>
