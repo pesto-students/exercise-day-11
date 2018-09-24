@@ -8,6 +8,7 @@ Use the replaceChild method to replace a node. -->
 <html>
 
 <head>
+  <meta charset="utf-8" />
   <title>JavaScript and the Document Object Model</title>
 </head>
 
@@ -22,6 +23,37 @@ Use the replaceChild method to replace a node. -->
       <p>More copy goes here</p>
     </div>
   </div>
+
+  <script>
+    const pageNode = document.querySelector('#page');
+    const headerNode = document.querySelector('#header');
+    const contentNode = document.querySelector('#content');
+
+    function append() {
+      const newNode = document.createElement('div');
+      newNode.innerHTML = '<h2>Appended</h2>';
+      pageNode.appendChild(newNode);
+    }
+
+    function insertBef() {
+      const newNode = document.createElement('div');
+      newNode.innerHTML = '<h2>Inserted Before</h2>';
+      pageNode.insertBefore(newNode, headerNode);
+    }
+
+    function replace() {
+      const newNode = document.createElement('div');
+      newNode.innerHTML = '<h2>Replaced</h2>';
+      pageNode.replaceChild(newNode, headerNode);
+    }
+
+    function work() {
+      setTimeout(append, 2000);
+      setTimeout(insertBef, 4000);
+      setTimeout(replace, 6000);
+      setTimeout(() => pageNode.removeChild(contentNode), 8000);
+    }
+  </script>
 </body>
 
 </html>
