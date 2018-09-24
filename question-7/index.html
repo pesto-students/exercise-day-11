@@ -18,6 +18,22 @@
     </select>
     <input type="button" onclick="removecolor()" value="Select and Remove">
   </form>
+
+  <script>
+    const selectElem = document.querySelector('#colorSelect');
+
+    function removecolor() {
+      const colorToRemove = selectElem.value;
+      const colorNodes = selectElem.children;
+
+      for (let i = 0; i < colorNodes.length; i += 1) {
+        if (colorNodes[i].innerHTML === colorToRemove) {
+          selectElem.removeChild(colorNodes[i]);
+          break;
+        }
+      }
+    }
+  </script>
 </body>
 
 </html>
