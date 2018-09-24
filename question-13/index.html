@@ -13,10 +13,29 @@ On clicking on the button, the page should scroll to top. -->
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css" />
   <title>Document</title>
+
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
-  <div class="button"> <span class = "up">Up</span></div>
+  <div class="button hidden">
+    <span class="up">Up</span>
+  </div>
+
+  <script>
+    const btnElem = document.querySelector('.button');
+    document.addEventListener('scroll', e => {
+      if (e.pageY > 0) btnElem.classList.remove('hidden');
+      else btnElem.classList.add('hidden');
+    });
+    btnElem.addEventListener('click', e => {
+      window.scrollTo(0, 0);
+    });
+  </script>
 </body>
 
 </html>
