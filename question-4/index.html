@@ -21,6 +21,16 @@
   </table>
   <br>
   <input type="button" onclick="insert_Row()" value="Insert row">
+
+  <script>
+    const tblElem = document.querySelector('table');
+    function insert_Row() {
+      const nRows = tblElem.querySelectorAll('tr').length;
+
+      const newRow = `<tr><td>Row${nRows + 1} cell1</td><td>Row${nRows + 1} cell2</td></tr>`;
+      tblElem.innerHTML += newRow;
+    }
+  </script>
 </body>
 
 </html>
