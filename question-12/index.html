@@ -23,5 +23,19 @@ Use the replaceChild method to replace a node. -->
     </div>
   </div>
 </body>
-
+<script>
+  const content = document.getElementById('content');
+  const newAppNode = document.createElement('p');
+  const newTextNode = document.createTextNode('Newly appended child node');
+  content.appendChild(newAppNode.appendChild(newTextNode));
+// Insert Before 
+  const newInsBef = document.createElement('h3');
+  const newInsBefText = document.createTextNode('Insert before text');
+  content.insertBefore(newInsBef.appendChild(newInsBefText),content.childNodes[0]);
+// Remove Child
+  content.removeChild(content.childNodes[0]);       // Insert before deleted
+// Replace Child
+  const newText = document.createTextNode('NEW REPLACED TEXT');
+  content.replaceChild(newText, content.childNodes[1]);
+</script>
 </html>
