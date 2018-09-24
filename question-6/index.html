@@ -18,8 +18,21 @@
   <table id="myTable" border="1">
   </table>
   <form>
+    <input type="number" min="0" id="row">
+    <input type="number" min="0" id="column">
     <input type="button" onclick="createTable()" value="Create the table">
   </form>
 </body>
-
+<script>
+  let table = document.getElementById('myTable');
+  function createTable() {
+    let r = document.getElementById('row');
+    let c = document.getElementById('column');
+    for(let i = 0; i  <= r; i++){
+      for(j = 0; j <= c; j++) {
+        console.log(i+' '+j);
+      }
+    }
+  }
+</script>
 </html>
