@@ -24,9 +24,28 @@
       <td>Row3 cell2</td>
     </tr>
   </table>
-  <form>
+  <form id="form1">
+    Row:
+    <input type="number" name="row" value="1">
+    <br> Column:
+    <input type="number" name="col" value="1">
+    <br> Text:
+    <input type="text" name="text" value="">
+    <br>
     <input type="button" onclick="changeContent()" value="Change content">
   </form>
 </body>
+<script>
+  function changeContent() {
+    const form1 = document.getElementById('form1');
+    const row = Number(form1.elements['row'].value);
+    const col = Number(form1.elements['col'].value);
+    const text = form1.elements['text'].value;
+
+    const table = document.getElementById('myTable');
+
+    table.rows[row].cells[col].innerText = text;
+  }
+</script>
 
 </html>
