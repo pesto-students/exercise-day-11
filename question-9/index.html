@@ -8,9 +8,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+
+  <style>
+    .highlight {
+      color: white;
+      text-shadow: 2px 2px 2px black;
+    }
+  </style>
 </head>
 
 <body>
+  <a href="http://www.google.com">
+    <h1>GOOGLE</h1>
+  </a>
+  <p>Sint laboriosam occaecati aliquid eveniet voluptatem.
+    <b>Inventore</b> aspernatur ea modi. Laborum ut vel illum. Explicabo
+    <b>voluptas</b> autem quos dolor numquam ut. Quasi quaerat
+    <b>consequatur</b> nostrum quibusdam expedita.
+  </p>
+
+  <script>
+    const importantWords = document.querySelectorAll('b');
+
+    document.querySelector('a').addEventListener('mouseover', e => {
+      importantWords.forEach(elem => {
+        elem.classList.add('highlight');
+      });
+    });
+
+    document.querySelector('a').addEventListener('mouseout', e => {
+      importantWords.forEach(elem => {
+        elem.classList.remove('highlight');
+      });
+    });
+  </script>
 
 </body>
 
