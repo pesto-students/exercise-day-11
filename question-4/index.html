@@ -22,5 +22,15 @@
   <br>
   <input type="button" onclick="insert_Row()" value="Insert row">
 </body>
+<script>
+  function insert_Row() {
+    const table = document.getElementById('sampleTable');
 
+    const count = table.childNodes.length + 1;
+
+    const newRow = `<tr><td>Row${count} cell1</td><td>Row${count} cell2</td></tr>`
+
+    table.innerHTML += newRow;
+  }
+</script>
 </html>

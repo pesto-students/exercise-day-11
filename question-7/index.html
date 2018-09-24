@@ -19,5 +19,14 @@
     <input type="button" onclick="removecolor()" value="Select and Remove">
   </form>
 </body>
+<script>
+  function removecolor() {
+    const listElement = document.getElementById('colorSelect');
+
+    let selectedOption = listElement.options[listElement.selectedIndex];
+
+    listElement.removeChild(selectedOption);
+  }
+</script>
 
 </html>

@@ -17,9 +17,33 @@
 <body>
   <table id="myTable" border="1">
   </table>
-  <form>
+  <form id="form1">
+      Row:
+      <input type="number" name="row" value="0">
+      <br> Column:
+      <input type="number" name="col" value="0">
+      <br>
     <input type="button" onclick="createTable()" value="Create the table">
   </form>
 </body>
+<script>
+    function createTable() {
+      const form1 = document.getElementById('form1');
+      const row = Number(form1.elements['row'].value);
+      const col = Number(form1.elements['col'].value);
+      const text = `Row-${row} Column-${col}`;
+  
+      const table = document.getElementById('myTable');
 
+      if(table.rows[row]) {
+        const newRow = table.rows[row];
+        const newColumn = newRow.insertCell();
+        newColumn.innerText = text;
+      } else {
+        const newRow = table.insertRow(row);
+        const newColumn = newRow.insertCell();
+        newColumn.innerText = text;
+      }  
+    }
+  </script>
 </html>

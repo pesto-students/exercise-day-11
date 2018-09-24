@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <form id="form1" onsubmit="getFormvalue()">
+  <form id="form1" onsubmit="return getFormvalue()">
     First name:
     <input type="text" name="fname" value="David">
     <br> Last name:
@@ -17,6 +17,13 @@
     <br>
     <input type="submit" value="Submit">
   </form>
+  <p id="output"></p>
 </body>
-
+<script>
+  function getFormvalue() {
+    const form1 = document.getElementById('form1');
+    document.getElementById('output').innerText = form1.elements['fname'].value + form1.elements['lname'].value
+    return false;
+  }
+</script>
 </html>
