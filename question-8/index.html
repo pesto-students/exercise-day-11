@@ -24,6 +24,19 @@
     </select>
     <input type="button" onclick="getOptions()" value="Count and Output all items">
   </form>
+  <script type="text/javascript">
+    function getOptions() {
+      const selectElement = document.getElementById('mySelect');
+
+      let str = `Items Count: ${selectElement.options.length}\n`;
+
+      Array.from(selectElement.options).forEach(item => {
+        str += `${item.innerText}\n`;
+      });
+
+      alert(str);
+    }
+  </script>
 </body>
 
 </html>
