@@ -25,8 +25,48 @@
     </tr>
   </table>
   <form>
+    <label>Row
+      <input type="number" name="row" />
+    </label>
+    <label>Column
+      <input type="number" name="column" />
+    </label>
+    <label>New Content
+      <input type="text" name="content" />
+    </label>
+
     <input type="button" onclick="changeContent()" value="Change content">
   </form>
+
+  <script>
+    const tblElem = document.querySelector('table');
+    const rowInput = document.querySelector('input[name="row"]');
+    const colInput = document.querySelector('input[name="column"]');
+    const contentInput = document.querySelector('input[name="content"]');
+
+    function changeContent() {
+      const nRows = tblElem.querySelectorAll('tr').length;
+      const nCols = tblElem.querySelectorAll('tr:first-child > td').length;
+
+      if (rowInput.value && rowInput.value <= nRows &&
+        colInput.value && colInput.value <= nCols) {
+        setTableCell(+rowInput.value, +colInput.value, contentInput.value);
+        clearForm();
+      } else {
+        alert('Invalid input!');
+      }
+    }
+
+    function clearForm() {
+      rowInput.value = '';
+      colInput.value = '';
+      contentInput.value = '';
+    }
+
+    function setTableCell(row, col, str) {
+      document.querySelector(`table tr:nth-child(${row}) > td:nth-child(${col})`).innerHTML = str;
+    }
+  </script>
 </body>
 
 </html>
