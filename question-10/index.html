@@ -18,11 +18,9 @@ Use the childNodes property to access a group of child elements -->
 <body>
 
   <div id="page">
-  
     <div id="header">
       <h1 id="title">Page title</h1>
     </div>
-  
     <div id="content">
     
       <h2>Content title</h2>
@@ -30,8 +28,16 @@ Use the childNodes property to access a group of child elements -->
       <p>Some copy goes here</p>
     
       <p>More copy goes here</p>
-      </div>
     </div>
+  </div>
 </body>
+<script>
+  const page = document.getElementById('page');
+  
+  console.log('First Child: '+page.firstChild.nodeName);
+  console.log('Last Child: '+page.lastChild.nodeName);
+  console.log('Next Sibling: '+page.nextSibling.nodeName);
+  console.log('Previous Sibling: '+page.previousSibling.nodeName);
 
+</script>
 </html>

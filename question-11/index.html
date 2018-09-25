@@ -24,4 +24,9 @@ Change the value of a node attribute -->
   </div>
 </body>
 
+<script>
+  const content = document.getElementById('content');
+  content.childNodes[0].nodeValue = 'New nodeValue'
+  console.log(content.childNodes[0].ATTRIBUTE_NODE =  'New Attribute');
+</script>
 </html>

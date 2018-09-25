@@ -11,7 +11,18 @@
 </head>
 
 <body>
-
+      <p>This is the paragraph.<strong id="sample">This is the bold text.</strong></p>
+      <a href="javascript:void(0);" id="link">Hover me</a>
 </body>
 
+<script>
+  let text = document.getElementById('sample');
+  let link = document.getElementById('link');
+
+  link.addEventListener('mouseover',function(e) {
+    text.innerHTML = `<mark>This is the bold text</mark>`;
+    console.log('eve');
+  })
+
+</script>
 </html>
